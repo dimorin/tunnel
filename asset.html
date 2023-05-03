@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>스마트 터널 안전 관리</title>
+</head>
+
+<body class="sub">
+  <main>
+    <div class="sub_container d-flex flex-column">
+      <div class="search_wrap flex-shrink-0">
+        <div class="left_wrap">
+          <div class="asset_radio_wrap mr-3">
+            <input type="radio" id="person" name="asset" checked><label for="person">작업자</label>
+            <input type="radio" id="vehicle" name="asset"><label for="vehicle">중장비</label>
+          </div>
+          <select class="tunnel_filter" name="">
+            <option>터널</option>
+            <option value="">고막</option>
+            <option value="">죽정</option>
+          </select>
+          <div class="ml-2"></div>
+          <select class="tunnel_filter" name="">
+            <option>구간</option>
+            <option value="">시점부 ○○ 방향</option>
+            <option value="">시점부 ○○ 방향</option>
+            <option value="">시점부 ○○ 방향</option>
+          </select>
+          <div class="ml-2"></div>
+          <select class="tunnel_filter" name="">
+            <option>분류</option>
+            <option value="">발주처</option>
+            <option value="">시공사</option>
+            <option value="">협력사</option>
+            <option value="">기타</option>
+          </select>
+          <div class="ml-2"></div>
+          <select class="tunnel_filter" name="">
+            <option>입퇴장 상태</option>
+            <option value="">입장</option>
+            <option value="">퇴장</option>
+          </select>                   
+        </div>
+        <div class="right_wrap">
+          <div class="input_search_wrap">
+            <input type="text" name="" id="" class="tunnel_input search" placeholder="이름, 분류, 회사, 관리 번호, 직종을 입력해주세요">
+            <button class="btn_search">검색</button>
+          </div>
+        </div>
+      </div>      
+      <div class="table_header_wrap flex-shrink-0">
+        <div class="left">
+          <div class="title">작업자 리스트</div>
+        </div>      
+        <div class="right">
+          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal">등록</button>
+        </div>        
+      </div>
+      <div class="position-relative sticky_wrap flex-grow-1">
+        <div class="sticky_box tunnel_scrollbar h-100">
+          <div style="height:0px;">
+            <table class="vertical sticky">
+              <thead>
+                <tr>
+                  <th><span>이름</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>분류</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>회사</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>관리 번호</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>직종</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>비콘 정보</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>현재 위치</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>입퇴장 상태</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>입장 일시</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>퇴장 일시</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th>수정</th>
+                  <th>삭제</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">홍길동</td>
+                  <td class="text-center">발주처</td>
+                  <td class="text-center">미미건설</td>
+                  <td class="text-center">001</td>
+                  <td class="text-center">굴진공</td>
+                  <td class="text-center">AB0123456789</td>
+                  <td class="text-center">고막4(고막, 시점부 ○○ 방향)</td>
+                  <td class="text-center"><span class="badge positive">입장</span></td>
+                  <td class="text-center">2023.03.20 00:00:00</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+                <tr>
+                  <td class="text-center">홍길동</td>
+                  <td class="text-center">발주처</td>
+                  <td class="text-center">미미건설</td>
+                  <td class="text-center">001</td>
+                  <td class="text-center">굴진공</td>
+                  <td class="text-center">AB0123456789</td>
+                  <td class="text-center">고막4(고막, 시점부 ○○ 방향)</td>
+                  <td class="text-center"><span class="badge negative">퇴장</span></td>
+                  <td class="text-center">2023.03.20 00:00:00</td>
+                  <td class="text-center">2023.03.20 00:00:00</td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="table_footer_wrap flex-shrink-0">
+        <div class="total_wrap">
+          <span>총</span>
+          <span class="total">10</span>
+          <span>개</span>
+        </div>
+        <div class="pagenation_wrap">
+          <button class="btn_page mx-1"><span
+              class="material-symbols-outlined">keyboard_double_arrow_left</span></button>
+          <button class="btn_page mx-1"><span class="material-symbols-outlined">keyboard_arrow_left</span></button>
+          <div class="page_num mx-3">
+            <span class="current_page">1</span>
+            <span>/</span>
+            <span class="total_page">4</span>
+          </div>
+          <button class="btn_page mx-1"><span class="material-symbols-outlined">keyboard_arrow_right</span></button>
+          <button class="btn_page mx-1"><span
+              class="material-symbols-outlined">keyboard_double_arrow_right</span></button>
+        </div>
+        <select class="tunnel_filter page_num" name="">
+          <option value="10">10개씩</option>
+          <option value="30">30개씩</option>
+          <option value="50">50개씩</option>
+        </select>
+      </div>
+    </div>
+  </main>
+  
+  <script src="./js/jquery/jquery-3.0.0.min.js"></script>
+  <script src="./js/main/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    var pWindow;
+    var modal;
+    var loading_spinner;
+    $(function(){
+      initData();
+      initEventListener();
+      loading_spinner.hide();
+    });
+
+    function initData(){
+      pWindow = parent;
+      modal = pWindow.modal;
+      loading_spinner = pWindow.loading_spinner;
+    }
+   
+    function initEventListener(){
+      $(".arrow-sort").on("click", function(event){
+        var arrowOrder = ['combo', 'down', 'up'];
+        var currentIcon=0;
+        var nextIcon=0;
+        for(var i=0; i<arrowOrder.length; i++){			          
+          if(event.target.className == arrowOrder[i]){
+            currentIcon=i;
+            nextIcon=i+1;
+            if(i==arrowOrder.length-1) nextIcon=0;
+          }
+        }
+        event.target.setAttribute('class', arrowOrder[nextIcon]);			
+        $(event.currentTarget).attr('order',nextIcon);        
+      });
+
+      $('.btn_normal.add').on('click',function(){
+        modal.openModal('add');
+      });
+      $('.btn_icon.edit').on('click',function(){
+        modal.openModal('edit');
+      });
+      $('.btn_icon.delete').on('click',function(){
+        modal.openModal('delete');
+      });
+      $('.tunnel_filter').select2({
+        width: 200,
+        minimumResultsForSearch: Infinity
+      });
+      $('.tunnel_filter.page_num').select2({
+        width: 90,
+        minimumResultsForSearch: Infinity
+      });
+
+
+
+    }
+    
+
+  </script>
+</body>
+
+</html>
