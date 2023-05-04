@@ -199,26 +199,16 @@ header .dropdown-menu > li .date{font-weight:400;font-size:14px;color:var(--txt-
 .tunnelModal#deleteModal .modal-dialog{min-width:240px;}
 
 /* datepicker */
-
-.datepicker table tr td,
-.datepicker table tr th{font-size:14px;}
-.datepicker table tr td.today{color:#000;background-color:#ffdb99;border-color:#ffb733;}
+.datepicker table tr td{font-size:14px;color:var(--txt-color);}
+.datepicker table tr th{font-weight:400;font-size:14px;color:var(--title-color);}
+.datepicker table tr td.today{color:white;background-image:none;background-color:var(--primary-color);border-color:var(--primary-color);}
 .datepicker table tr td.disabled,
-.datepicker table tr td.disabled:hover{background:none;color:#777777;cursor:default;}
+.datepicker table tr td.disabled:hover{background:none;color:#dddddd;cursor:default;}
 .datepicker table tr td.active:active, 
 .datepicker table tr td.active.highlighted:active, 
 .datepicker table tr td.active.active, 
-.datepicker table tr td.active.highlighted.active {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.datepicker table tr td.range {
-  color: #000;
-  background-color: #eeeeee;
-  border-color: #bbbbbb;
-  border-radius: 0;
-}
+.datepicker table tr td.active.highlighted.active {color: #fff;background-color: #286090;border-color: #204d74;}
+.datepicker table tr td.range {color: #000;background-color: #eeeeee;border-color: #bbbbbb;border-radius: 0;}
 
 @media (min-width: 2560px) {
 
