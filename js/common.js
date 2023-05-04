@@ -119,5 +119,20 @@ Number.prototype.zf = function (len) { return this.toString().zf(len); };
 
 
 
-
+$(function(){
+	$(".arrow-sort").on("click", function(event){
+        var arrowOrder = ['combo', 'down', 'up'];
+        var currentIcon=0;
+        var nextIcon=0;
+        for(var i=0; i<arrowOrder.length; i++){			          
+          if(event.target.className == arrowOrder[i]){
+            currentIcon=i;
+            nextIcon=i+1;
+            if(i==arrowOrder.length-1) nextIcon=0;
+          }
+        }
+        event.target.setAttribute('class', arrowOrder[nextIcon]);			
+        $(event.currentTarget).attr('order',nextIcon);        
+      });
+});
 

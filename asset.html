@@ -152,6 +152,7 @@
   <script src="./js/bootstrap-datepicker.min.js"></script>
   <script src="./js/bootstrap-datepicker.ko.min.js"></script>  
   <script src="./js/select2.min.js"></script>
+  <script src="./js/common.js"></script>
   <script>
     var pWindow;
     var modal;
@@ -169,21 +170,6 @@
     }
    
     function initEventListener(){
-      $(".arrow-sort").on("click", function(event){
-        var arrowOrder = ['combo', 'down', 'up'];
-        var currentIcon=0;
-        var nextIcon=0;
-        for(var i=0; i<arrowOrder.length; i++){			          
-          if(event.target.className == arrowOrder[i]){
-            currentIcon=i;
-            nextIcon=i+1;
-            if(i==arrowOrder.length-1) nextIcon=0;
-          }
-        }
-        event.target.setAttribute('class', arrowOrder[nextIcon]);			
-        $(event.currentTarget).attr('order',nextIcon);        
-      });
-
       $('.btn_normal.add').on('click',function(){
         modal.openModal('add');
       });
