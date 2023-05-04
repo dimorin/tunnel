@@ -210,6 +210,17 @@ header .dropdown-menu > li .date{font-weight:400;font-size:14px;color:var(--txt-
 .datepicker table tr td.active.highlighted.active {color: #fff;background-color: #286090;border-color: #204d74;}
 .datepicker table tr td.range {color: #000;background-color: #eeeeee;border-color: #bbbbbb;border-radius: 0;}
 
+/* login */
+body.login{display:flex;align-items:center;justify-content:center;height:100%;background:white;}
+.login_wrap{display:flex;justify-content:space-between;align-items:center;}
+.login_wrap .img_wrap{position:relative;}
+.login_wrap .logo{position:absolute;left:0;top:0;}
+.login_wrap .form_wrap{width:365px;margin-left:240px;}
+.login_wrap .form_wrap h3{font-weight:700;font-size:40px;color:var(--title-color);}
+.login_wrap .form_wrap label{display:block;margin:0;padding:0;font-weight:500;font-size:20px;color:var(--title-color);}
+.login_wrap .form_wrap .tunnel_input{width:100%;height:40px;}
+.login_wrap .form_wrap .btn_login{width:100%;height:40px;line-height:40px;font-size:13px;color:white;border-radius:5px;background-color:var(--normal-color);border:none;transition:background-color 0.4s ease;}
+.login_wrap .form_wrap .btn_login:hover{background-color:#017A83;}
 @media (min-width: 2560px) {
 
 }
