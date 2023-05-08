@@ -61,7 +61,7 @@
           <div class="title">중장비 리스트</div>
         </div>      
         <div class="right">
-          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal_asset">등록</button>
+          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal_asset2">등록</button>
         </div>        
       </div>
       <div class="position-relative sticky_wrap flex-grow-1">
@@ -70,11 +70,11 @@
             <table class="vertical sticky">
               <thead>
                 <tr>
-                  <th><span>이름</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>장비명</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>분류</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>회사</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
-                  <th><span>관리 번호</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
-                  <th><span>직종</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>장비 번호</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>장비 종류</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>비콘 정보</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>현재 위치</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>입퇴장 상태</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
@@ -86,32 +86,32 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="text-center">홍길동</td>
+                  <td class="text-center">차량1</td>
                   <td class="text-center">발주처</td>
                   <td class="text-center">미미건설</td>
-                  <td class="text-center">001</td>
-                  <td class="text-center">굴진공</td>
+                  <td class="text-center">11가1234</td>
+                  <td class="text-center">차량</td>
                   <td class="text-center">AB0123456789</td>
                   <td class="text-center">고막4(고막, 시점부 ○○ 방향)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
                   <td class="text-center">2023.03.20 00:00:00</td>
                   <td class="text-center">-</td>
-                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_asset" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_asset" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_asset2" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_asset2" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                 </tr>
                 <tr>
-                  <td class="text-center">홍길동</td>
-                  <td class="text-center">발주처</td>
+                  <td class="text-center">크레인1</td>
+                  <td class="text-center">시공사</td>
                   <td class="text-center">미미건설</td>
-                  <td class="text-center">001</td>
-                  <td class="text-center">굴진공</td>
+                  <td class="text-center">11나1234</td>
+                  <td class="text-center">크레인</td>
                   <td class="text-center">AB0123456789</td>
                   <td class="text-center">고막4(고막, 시점부 ○○ 방향)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
                   <td class="text-center">2023.03.20 00:00:00</td>
                   <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_asset" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_asset" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_asset2" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_asset2" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                 </tr>
                 
               </tbody>
@@ -147,7 +147,7 @@
     </div>
   </main>
   <!-- add Modal -->
-  <div class="modal fade tunnelModal" id="addModal_asset" tabindex="-1" aria-hidden="true">
+  <div class="modal fade tunnelModal" id="addModal_asset2" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -157,7 +157,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" name="" id="" class="tunnel_input" placeholder="이름">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="장비명">
           <div class="mt-10px"></div>
           <select class="tunnel_filter" name="" id="">
             <option>분류</option>
@@ -169,9 +169,9 @@
           <div class="mt-10px"></div>
           <input type="text" name="" id="" class="tunnel_input" placeholder="회사">
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="관리 번호">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 번호">
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="직종">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 종류">
           <div class="mt-10px"></div>
           <input type="text" name="" id="" class="tunnel_input" placeholder="연결할 비콘">
         </div>
@@ -184,7 +184,7 @@
   </div>
 
   <!-- edit Modal -->
-  <div class="modal fade tunnelModal" id="editModal_asset" tabindex="-1" aria-hidden="true">
+  <div class="modal fade tunnelModal" id="editModal_asset2" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -194,7 +194,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" name="" id="" class="tunnel_input" placeholder="이름">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="장비명">
           <div class="mt-10px"></div>
           <select class="tunnel_filter" name="" id="">
             <option>분류</option>
@@ -206,9 +206,9 @@
           <div class="mt-10px"></div>
           <input type="text" name="" id="" class="tunnel_input" placeholder="회사">
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="관리 번호">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 번호">
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="직종">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 종류">
           <div class="mt-10px"></div>
           <input type="text" name="" id="" class="tunnel_input" placeholder="연결할 비콘">
         </div>
@@ -221,7 +221,7 @@
   </div>
 
   <!-- delete Modal -->
-  <div class="modal fade tunnelModal" id="deleteModal_asset" tabindex="-1" aria-hidden="true">
+  <div class="modal fade tunnelModal" id="deleteModal_asset2" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -240,6 +240,7 @@
       </div>
     </div>
   </div>
+  
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/bootstrap-datepicker.min.js"></script>

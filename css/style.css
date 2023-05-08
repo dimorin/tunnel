@@ -74,7 +74,7 @@ header{display:flex;align-items:center;justify-content:space-between;position:fi
 .tunnel_textarea::placeholder {color:rgba(110,118,142,0.6);}
 
 /* search */
-.input_search_wrap{position:relative;width:420px;height:40px;}
+.input_search_wrap{position:relative;width:380px;height:40px;}
 .input_search_wrap .btn_search{position:absolute;top:0;right:0;}
 
 /* lnb */
