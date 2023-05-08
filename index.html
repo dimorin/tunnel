@@ -67,7 +67,7 @@
     </header>
     <div class="lnb">
       <nav>
-        <ul class="lnb_list">
+        <ul class="lnb_1depth_list">
           <li class="active" onclick="javascript:goPage(this, 'asset')">
             <button type="button">작업자·중장비 관리</button>
           </li>
@@ -125,7 +125,7 @@
   </div>
 
   <!-- add Modal -->
-  <div class="modal fade tunnelModal" id="addModal" tabindex="-1" aria-hidden="true">
+  <!-- <div class="modal fade tunnelModal" id="addModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -143,10 +143,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- edit Modal -->
-  <div class="modal fade tunnelModal" id="editModal" tabindex="-1" aria-hidden="true">
+  <!-- <div class="modal fade tunnelModal" id="editModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -164,10 +164,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- delete Modal -->
-  <div class="modal fade tunnelModal" id="deleteModal" tabindex="-1" aria-hidden="true">
+  <!-- <div class="modal fade tunnelModal" id="deleteModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -185,7 +185,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+  <!-- loading -->
   <div class="loading_spinner">
     <div class="spinner-border" role="status">
       <span class="sr-only">Loading...</span>
@@ -217,7 +219,7 @@
     } */
 
     function goPage(element, pageName){        
-      $('.lnb_list li').removeClass('active');
+      $('.lnb_1depth_list li').removeClass('active');
       $(element).addClass('active');
       //stopPolling();
       //pollingPageYn = false;        

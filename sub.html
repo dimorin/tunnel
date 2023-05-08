@@ -52,7 +52,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="24" height="24"><path d="M21.41,5h-4.41V.59l4.41,4.41Zm.59,2V24H2V3C2,1.34,3.34,0,5,0H15V7h7ZM13.17,15.5l2.77-4.5h-2.35l-1.6,2.59-1.6-2.59h-2.35l2.77,4.5-2.77,4.5h2.35l1.6-2.59,1.6,2.59h2.35l-2.77-4.5Z"/></svg>
           </button>
           <div class="ml-2"></div>
-          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal">등록</button>
+          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal_sub">등록</button>
         </div>        
       </div>
       <div class="position-relative sticky_wrap flex-grow-1">
@@ -90,8 +90,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -106,8 +106,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr>     
                 <tr>
@@ -122,8 +122,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -138,8 +138,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr> 
                 <tr>
@@ -154,8 +154,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -170,8 +170,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr> 
                 <tr>
@@ -186,8 +186,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -202,8 +202,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr> 
                 <tr>
@@ -218,8 +218,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -234,8 +234,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr> 
                 <tr>
@@ -250,8 +250,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -266,8 +266,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr> 
                 <tr>
@@ -282,8 +282,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
                 </tr>
                 <tr>
@@ -298,8 +298,8 @@
                   <td class="text-center">시점부 ○○ 방향</td>
                   <td class="text-center">고막4(100m)</td>
                   <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sub" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sub" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                   <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
                 </tr>            
               </tbody>
@@ -387,6 +387,71 @@
     </div>
   </main>
 
+  <!-- add Modal -->
+  <div class="modal fade tunnelModal" id="addModal_sub" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">등록</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="이름">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="이름" disabled>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn_normal fill">등록</button>
+          <button type="button" class="btn_normal ml-2" data-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- edit Modal -->
+  <div class="modal fade tunnelModal" id="editModal_sub" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">수정</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn_normal fill">수정</button>
+          <button type="button" class="btn_normal ml-2" data-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- delete Modal -->
+  <div class="modal fade tunnelModal" id="deleteModal_sub" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">삭제</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn_normal fill">삭제</button>
+          <button type="button" class="btn_normal ml-2" data-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/bootstrap-datepicker.min.js"></script>
@@ -395,7 +460,7 @@
   <script src="./js/common.js"></script>
   <script>
     var pWindow;
-    var modal;
+    //var modal;
     var loading_spinner;
     $(function(){
       initData();
@@ -407,12 +472,12 @@
 
     function initData(){
       pWindow = parent;
-      modal = pWindow.modal;
+      //modal = pWindow.modal;
       loading_spinner = pWindow.loading_spinner;
     }
 
     function initEventListener(){
-      $('.btn_normal.add').on('click',function(){
+      /* $('.btn_normal.add').on('click',function(){
         modal.openModal('add');
       });
       $('.btn_icon.edit').on('click',function(){
@@ -420,7 +485,7 @@
       });
       $('.btn_icon.delete').on('click',function(){
         modal.openModal('delete');
-      });
+      }); */
       $('.tunnel_filter').select2({
         width: 200,
         //minimumResultsForSearch: -1,
