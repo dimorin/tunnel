@@ -141,6 +141,6 @@ $(function(){
 			console.log(event.target.value);
 			//getContents();
 		}
-	})
+	});	
 });
 
