@@ -137,23 +137,24 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" name="" id="" class="tunnel_input" placeholder="장비명">
+          <div class="tunnel_date_wrap">
+            <input type="text" class="tunnel_date" id="datepicker_add">
+            <span class="material-symbols-outlined icon">calendar_month</span>
+          </div> 
           <div class="mt-10px"></div>
           <select class="tunnel_filter" name="" id="">
-            <option>분류</option>
-            <option value="">발주처</option>
-            <option value="">시공사</option>
-            <option value="">협력사</option>
-            <option value="">기타</option>
+            <option>터널</option>
+            <option value="">고막</option>
+            <option value="">죽정</option>
           </select>
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="회사">
+          <select class="tunnel_filter" name="" id="">
+            <option>구간</option>
+            <option value="">시점부○○방향</option>
+            <option value="">종점부○○방향</option>
+          </select>
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 번호">
-          <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 종류">
-          <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="연결할 비콘">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="일일 굴진 길이">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn_normal fill">등록</button>
@@ -174,23 +175,24 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" name="" id="" class="tunnel_input" placeholder="장비명">
+          <div class="tunnel_date_wrap">
+            <input type="text" class="tunnel_date" id="datepicker_edit" disabled>
+            <span class="material-symbols-outlined icon">calendar_month</span>
+          </div> 
           <div class="mt-10px"></div>
-          <select class="tunnel_filter" name="" id="">
-            <option>분류</option>
-            <option value="">발주처</option>
-            <option value="">시공사</option>
-            <option value="">협력사</option>
-            <option value="">기타</option>
+          <select class="tunnel_filter" name="" id="" disabled>
+            <option>터널</option>
+            <option value="">고막</option>
+            <option value="">죽정</option>
           </select>
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="회사">
+          <select class="tunnel_filter" name="" id="" disabled>
+            <option>구간</option>
+            <option value="">시점부○○방향</option>
+            <option value="">종점부○○방향</option>
+          </select>
           <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 번호">
-          <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="장비 종류">
-          <div class="mt-10px"></div>
-          <input type="text" name="" id="" class="tunnel_input" placeholder="연결할 비콘">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="일일 굴진 길이">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn_normal fill">수정</button>
@@ -270,7 +272,24 @@
         endDate: new Date(),
         todayHighlight: true
       });
-
+      $( "#datepicker_add" ).datepicker({
+        inline: true,
+        sideBySide: true,
+        language: 'ko',
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        endDate: new Date(),
+        todayHighlight: true
+      });
+      $( "#datepicker_edit" ).datepicker({
+        inline: true,
+        sideBySide: true,
+        language: 'ko',
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        endDate: new Date(),
+        todayHighlight: true
+      });
     }
   </script>
 </body>

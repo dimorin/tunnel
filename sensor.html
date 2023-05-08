@@ -15,44 +15,14 @@
 
 <body class="sub">
   <main>
-    <div class="sub_container d-flex flex-column">
-      <div class="search_wrap flex-shrink-0">
-        <div class="left_wrap">
-          <div class="asset_radio_wrap mr-3">
-            <input type="radio" id="person" name="asset" checked><label for="person">작업자</label>
-            <input type="radio" id="vehicle" name="asset"><label for="vehicle">중장비</label>
-          </div>
-          <select class="tunnel_filter" name="">
-            <option>상태</option>
-            <option value="AL">천공</option>
-            <option value="WY">발파</option>
-            <option value="c">버력처리</option>
-          </select>
-          <div class="ml-2"></div>
-          <div class="tunnel_date_wrap">
-            <input type="text" class="tunnel_date" id="datepicker">
-            <span class="material-symbols-outlined icon">calendar_month</span>
-          </div>          
-        </div>
-        <div class="right_wrap">
-          <div class="input_search_wrap">
-            <input type="text" name="" id="" class="tunnel_input search" placeholder="입력해주세요">
-            <button class="btn_search">검색</button>
-          </div>
-        </div>
-      </div>
-      
+    <div class="sub_container d-flex flex-column">      
       <div class="table_header_wrap flex-shrink-0">
         <div class="left">
           <div class="title">센서 리스트</div>
           <button class="btn_icon refresh ml-2" title="새로고침"><span class="material-symbols-outlined">refresh</span></button>
         </div>      
         <div class="right">
-          <button class="btn_excel" title="엑셀 다운로드">
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="24" height="24"><path d="M21.41,5h-4.41V.59l4.41,4.41Zm.59,2V24H2V3C2,1.34,3.34,0,5,0H15V7h7ZM13.17,15.5l2.77-4.5h-2.35l-1.6,2.59-1.6-2.59h-2.35l2.77,4.5-2.77,4.5h2.35l1.6-2.59,1.6,2.59h2.35l-2.77-4.5Z"/></svg>
-          </button>
-          <div class="ml-2"></div>
-          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal">등록</button>
+          <button class="btn_normal fill add" data-toggle="modal" data-target="#addModal_sensor">등록</button>
         </div>        
       </div>
       <div class="position-relative sticky_wrap flex-grow-1">
@@ -61,247 +31,37 @@
             <table class="vertical sticky">
               <thead>
                 <tr>
-                  <th>
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </th>
-                  <th><span>일자</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>모델</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>제조사</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>IP</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
+                  <th><span>port</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>터널</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th><span>구간</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
-                  <th><span>발생 위치</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
-                  <th><span>입장 상태</span> <button class="arrow-sort" order="0"><div class="combo"></div></button></th>
                   <th>수정</th>
                   <th>삭제</th>
-                  <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
+                  <td class="text-center">aaaa</td>
+                  <td class="text-center">조이</td>
+                  <td class="text-center">192.168.3.30</td>
+                  <td class="text-center">8080</td>
                   <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
+                  <td class="text-center">시점부○○방향</td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sensor" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sensor" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
                 </tr>
                 <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
+                  <td class="text-center">aaaa</td>
+                  <td class="text-center">조이</td>
+                  <td class="text-center">192.168.3.30</td>
+                  <td class="text-center">8080</td>
                   <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr>     
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr> 
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr> 
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr> 
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr> 
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr> 
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge positive">입장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_icon memo" title="메모"><span class="material-symbols-outlined">note</span></button></td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <label class="custom-checkbox">                                        
-                      <input type="checkbox" name="">
-                      <span class="checkmark"></span>                      
-                    </label>
-                  </td>
-                  <td class="text-center">2023.03.20 00:00:00</td>
-                  <td class="text-center">고막</td>
-                  <td class="text-center">시점부 ○○ 방향</td>
-                  <td class="text-center">고막4(100m)</td>
-                  <td class="text-center"><span class="badge negative">퇴장</span></td>
-                  <td class="text-center"><button class="btn_icon edit" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
-                  <td class="text-center"><button class="btn_icon delete" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
-                  <td class="text-center"><button class="btn_small" title="알림 확인">확인</button></td>
-                </tr>            
+                  <td class="text-center">시점부○○방향</td>
+                  <td class="text-center"><button class="btn_icon edit" data-toggle="modal" data-target="#editModal_sensor" title="수정"><span class="material-symbols-outlined">edit_square</span></button></td>
+                  <td class="text-center"><button class="btn_icon delete" data-toggle="modal" data-target="#deleteModal_sensor" title="삭제"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>           
               </tbody>
             </table>
           </div>
@@ -331,62 +91,107 @@
           <option value="30">30개씩</option>
           <option value="50">50개씩</option>
         </select>
-      </div>
-      
-      <!-- <section class="p-2">
-        <h5>button</h5>
-        <button class="btn_normal fill">등록</button>
-        <button class="btn_normal">취소</button>
-        
-        <button class="btn_search">검색</button>
-
-      </section>
-      <section class="p-2">
-        
-        <select class="tunnel_filter" name="state" id="sel">
-          <option>상태</option>
-          <option value="AL">천공</option>
-          <option value="WY">발파</option>
-          <option value="c">버력처리</option>
-        </select>
-        <input type="button" id="read" value="read">
-        <input type="button" id="add" value="Add">
-      </section>
-      <section class="p-2">
-        <h5>form</h5>
-        
-        <div class="input_search_wrap">
-          <input type="text" name="" id="" class="tunnel_input search" placeholder="입력해주세요">
-          <button class="btn_search">검색</button>
-        </div>
-        <br>
-        <input type="text" name="" id="" class="tunnel_input" placeholder="입력해주세요">
-        <br><br>
-        
-      </section>
-      <section class="p-2">
-        <h5>pagenation</h5>
-        
-
-      </section>
-      <section class="p-2">
-        <h5>icon</h5>
-        <span class="material-symbols-outlined">calendar_month</span>
-        <span class="material-symbols-outlined">refresh</span>
-        <span class="material-symbols-outlined">close</span>
-        <span class="material-symbols-outlined">done</span>
-        <span class="material-symbols-outlined">expand_more</span>
-        <span class="material-symbols-outlined">expand_less</span>
-        <span class="material-symbols-outlined">logout</span>
-        <span class="material-symbols-outlined">unfold_more</span>
-        <span class="material-symbols-outlined">arrow_drop_down</span>
-        <span class="material-symbols-outlined">arrow_drop_up</span>
-        
-        
-      </section> -->
+      </div>      
     </div>
   </main>
+  <!-- add Modal -->
+  <div class="modal fade tunnelModal" id="addModal_sensor" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">등록</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="모델">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="제조사">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="IP">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="port">
+          <div class="mt-10px"></div>
+          <select class="tunnel_filter" name="" id="">
+            <option>터널</option>
+            <option value="">고막</option>
+            <option value="">죽정</option>
+          </select>
+          <div class="mt-10px"></div>
+          <select class="tunnel_filter" name="" id="">
+            <option>구간</option>
+            <option value="">시점부○○방향</option>
+            <option value="">종점부○○방향</option>
+          </select>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn_normal fill">등록</button>
+          <button type="button" class="btn_normal ml-2" data-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- edit Modal -->
+  <div class="modal fade tunnelModal" id="editModal_sensor" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">수정</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="" id="" class="tunnel_input" placeholder="모델">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="제조사">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="IP">
+          <div class="mt-10px"></div>
+          <input type="text" name="" id="" class="tunnel_input" placeholder="port">
+          <div class="mt-10px"></div>
+          <select class="tunnel_filter" name="" id="">
+            <option>터널</option>
+            <option value="">고막</option>
+            <option value="">죽정</option>
+          </select>
+          <div class="mt-10px"></div>
+          <select class="tunnel_filter" name="" id="">
+            <option>구간</option>
+            <option value="">시점부○○방향</option>
+            <option value="">종점부○○방향</option>
+          </select>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn_normal fill">수정</button>
+          <button type="button" class="btn_normal ml-2" data-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- delete Modal -->
+  <div class="modal fade tunnelModal" id="deleteModal_sensor" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">삭제</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span class="txt">해당 리스트를 삭제하시겠습니까?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn_normal fill">삭제</button>
+          <button type="button" class="btn_normal ml-2" data-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./js/jquery-3.0.0.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/bootstrap-datepicker.min.js"></script>
@@ -395,7 +200,6 @@
   <script src="./js/common.js"></script>
   <script>
     var pWindow;
-    var modal;
     var loading_spinner;
     $(function(){
       initData();
@@ -407,23 +211,12 @@
 
     function initData(){
       pWindow = parent;
-      modal = pWindow.modal;
       loading_spinner = pWindow.loading_spinner;
     }
 
-    function initEventListener(){
-      $('.btn_normal.add').on('click',function(){
-        modal.openModal('add');
-      });
-      $('.btn_icon.edit').on('click',function(){
-        modal.openModal('edit');
-      });
-      $('.btn_icon.delete').on('click',function(){
-        modal.openModal('delete');
-      });
+    function initEventListener(){      
       $('.tunnel_filter').select2({
         width: 200,
-        //minimumResultsForSearch: -1,
         minimumResultsForSearch: Infinity
       });
       $('.tunnel_filter.page_num').select2({
@@ -431,31 +224,7 @@
         minimumResultsForSearch: Infinity
       });
 
-      $( "#datepicker" ).datepicker({
-        inline: true,
-        sideBySide: true,
-        language: 'ko',
-        format: 'yyyy-mm-dd',
-        autoclose: true,
-        endDate: new Date(),
-        todayHighlight: true
-      });
-
-      $('#read').on('click', function () {
-        var str = $('#sel').val();
-        console.log(str);
-      });
-
-      $('#add').on('click', function () {
-        var data = {
-          id: 1,
-          text: 'Barn owl'
-        };
-        var newOption = new Option(data.text, data.id, false, false);
-        $('#sel').append(newOption).trigger('change');
-      });
-
-
+     
       
     }
   </script>

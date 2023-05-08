@@ -106,6 +106,7 @@ header{display:flex;align-items:center;justify-content:space-between;position:fi
 .tunnel_date_wrap{position:relative;}
 .tunnel_date_wrap .icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--primary-color);pointer-events: none;}
 .tunnel_date{width:200px;height:40px;border:1px solid #CED4DA;border-radius:5px;outline:none;font-weight:400;font-size:14px;color:var(--txt-color);line-height:40px;padding:0 30px 0px 10px;}
+.tunnel_date:disabled{background-color:rgba(206,212,218,.3);}
 
 /* filter */
 .tunnel_filter+.select2-container .select2-selection--single{height:40px;border:1px solid #CED4DA;border-radius:5px;}
@@ -158,6 +159,7 @@ table.vertical thead th{height:40px;line-height:40px;background:#F2FBFB;font-wei
 table.vertical tbody td{height:55px;border-bottom:1px solid #EEF2F6;font-weight:400;font-size:16px;color:var(--txt-color);padding:0 10px;}
 table.vertical.sticky thead th{position:sticky;top:0;z-index:10;line-height:0;}
 table.vertical.sticky thead th > span{line-height:14px;}
+table.vertical.sticky thead th > span.small{font-size:12px;}
 .sticky_wrap::before{content:'';position:absolute;top:0;width:100%;height:40px;background:#F2FBFB;z-index:10;}
 .sticky_wrap .sticky_box{overflow-y:auto;}
 table.vertical tbody tr:hover{background:#F2FBFB;}
@@ -196,11 +198,14 @@ header .dropdown-menu > li .date{font-weight:400;font-size:14px;color:var(--txt-
 /* modal */
 .modal-backdrop{background-color:transparent;}
 .tunnelModal .modal-dialog{width:240px;}
+.tunnelModal#deleteModal_tag .modal-dialog{width:310px;}
 .tunnelModal .modal-content{border-radius:5px;border:1px solid #EEF2F6;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
 .tunnelModal .modal-header{display:flex;align-items:center;height:60px;padding:0px;border-bottom:1px solid #EEF2F6;}
 .tunnelModal .modal-footer{display:flex;align-items:center;justify-content:center;height:80px;padding:20px;border-top:1px solid #EEF2F6;}
 .tunnelModal .modal-body{padding:20px;font-size:0;}
 .tunnelModal .modal-body .txt{font-weight:400;font-size:14px;color:var(--txt-color);}
+.tunnelModal .modal-body .txt.small{font-size:12px;}
+.tunnelModal .modal-body .txt.warn{color:var(--warn-color);}
 .tunnelModal .modal-title{padding:20px;font-weight:400;font-size:16px;color:var(--title-txt);}
 .tunnelModal .close{padding:20px;margin:0;}
 .tunnelModal .close span{font-size:22px;color:var(--title-txt);}
@@ -234,5 +239,5 @@ body.login{display:flex;align-items:center;justify-content:center;height:100%;ba
 .login_wrap .form_wrap .btn_login{width:100%;height:40px;line-height:40px;font-size:13px;color:white;border-radius:5px;background-color:var(--normal-color);border:none;transition:background-color 0.4s ease;}
 .login_wrap .form_wrap .btn_login:hover{background-color:#017A83;}
 
-
-
+/* mapping */
+.mapping_box{display:flex;align-items:center;justify-content:space-between;width:1000px;height:600px;padding:70px;background-color:#F9FAFB;border:1px solid #DDE0E5;}
